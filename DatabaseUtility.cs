@@ -3,7 +3,7 @@ using System.IO;
 
 public sealed class DatabaseUtility
     {
-        public void backup(string file_name,string db_username,string db_password,string file_path,string schema_name)
+        public void backup(string file_name,string db_username,string db_password,string file_path,string service_name)
         {
 
 			var dmpFileName = $@"{file_name}";
@@ -14,7 +14,7 @@ public sealed class DatabaseUtility
             psi.FileName = "cmd.exe";
             psi.RedirectStandardInput = false;
             psi.RedirectStandardOutput = true;
-			var exportString = $@"expdp {db_username}/{db_password}@schema_name schemas={dto.db_username} dumpfile={dmpFileName}.DMP LOGFILE={dmpFileName}.Log DIRECTORY = DUMPS version=10.2.0";
+			var exportString = $@"expdp {db_username}/{db_password}@service_name schemas={dto.db_username} dumpfile={dmpFileName}.DMP LOGFILE={dmpFileName}.Log DIRECTORY = DUMPS version=10.2.0";
 			psi.Arguments = "/K"+exportString;
 			psi.UseShellExecute = false;
 
