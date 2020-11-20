@@ -12,7 +12,7 @@ Helps in executing stored procedure which has custom table types as parameters .
                 {
                    new StoredProcedureRequestModel() { ParamName = "@ParamName", Value = value }
                 };
-    List<ResponseModel> data = StoredProcedureExecutorExtensions<DbContext>.ExecuteStoredProcedure<ResponseModel>("stored procedure name", BasicsParam);
+    List<ResponseModel> data = StoredProcedureHelper<DbContext>.ExecuteStoredProcedure<ResponseModel>("stored procedure name", BasicsParam);
 
 and with complex type :
 
@@ -20,5 +20,5 @@ and with complex type :
                 {
                     new StoredProcedureRequestModel(){ ParamName="@param name",IsCustomType=true,CustomTableTypeName="table type name",CustomTypeColumnName="column name of table type",CustomTypeValues=paramValuesToPass}
                 };
-    List<ResponseModel> data = StoredProcedureExecutorExtensions<DbContext>.ExecuteStoredProcedure<ResponseModel>("stored procedure name", complexParam);
+    List<ResponseModel> data = StoredProcedureHelper<DbContext>.ExecuteStoredProcedure<ResponseModel>("stored procedure name", complexParam);
 
