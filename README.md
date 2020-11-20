@@ -1,7 +1,7 @@
 # OracleDbUtility
-Helper classes to perform database operations on Oracle DB
+Helper classes to perform database operations on DB
 
-##### 1. DatabaseUtility.cs
+##### 1. DatabaseUtility.cs (Oracle)
  Helps backing up database into dump file
 
 ##### 2. StoredProcedureHelper.cs (SQL Server)
