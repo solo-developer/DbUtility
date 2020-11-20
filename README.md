@@ -4,7 +4,7 @@ Helper classes to perform database operations on Oracle DB
 ##### 1. DatabaseUtility.cs
  Helps backing up database into dump file
 
-##### 2. StoredProcedureHelper.cs
+##### 2. StoredProcedureHelper.cs (SQL Server)
 Helps in executing stored procedure which has custom table types as parameters . Works with simple stored procedure too.
 
 ###### Usage :
